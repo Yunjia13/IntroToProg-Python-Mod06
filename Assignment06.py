@@ -123,12 +123,14 @@ class IO:
                 raise ValueError("First name should not contain numbers!")
         except Exception as e:
             IO.output_error_messages("Error!",e)
+            return
 
         try:
             if not student_last_name.isalpha():
                 raise ValueError("Last name should not contain numbers!")
         except Exception as e:
             IO.output_error_messages("Error!",e)
+            return
 
         course_name = input("Please enter the course's name? ")
         student_data.append({
